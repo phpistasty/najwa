@@ -6,6 +6,7 @@
 
    NS.add('contactForm', {
        init : function(){
+
            modules.each(function(index){
                var form = new ContactUsForm(instances.length, $(this));
                form.bindings();
@@ -104,8 +105,5 @@
     };
 
 
-    function setBindings(){
-
-    }
 
 })(najwa);

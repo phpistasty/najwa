@@ -1,0 +1,27 @@
+.navWrapper {
+  position:relative;
+  height:50px;
+
+  .navbar {
+    margin-bottom: 0;
+
+    &.sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index:100;
+    }
+
+    .navbar-nav {
+      @media screen and (min-width: 768px) {
+        text-align: center;
+        float: inherit;
+        & > li {
+          float: inherit;
+          display: inline-block;
+        }
+      }
+    }
+
+  }
+}
