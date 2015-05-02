@@ -1,0 +1,60 @@
+.head-message {
+  background: #2e2e30;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+.head-message ul {
+  padding: 0;
+  list-style: none;
+}
+.head-message ul li {
+  display: inline-block;
+  padding: 0 2%;
+}
+.head-message ul li a img {
+  max-width: 200px;
+}
+.navbar {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .navbar .navbar-nav {
+    text-align: center;
+    float: inherit;
+  }
+  .navbar .navbar-nav > li {
+    float: inherit;
+    display: inline-block;
+  }
+}
+.contact-section {
+  padding: 1em 0;
+}
+.site-section-cta img {
+  max-width: 100%;
+}
+.home-carousel .carousel-inner img {
+  margin: 0 auto;
+  max-width: 1300px;
+}
+.primary-message {
+  max-width: 900px;
+  background: #2e2e30;
+  margin: 0 auto;
+  padding: 1em 2em;
+  margin-top: -8em;
+  margin-bottom: 2em;
+  height: 200px;
+  position: relative;
+  z-index: 99;
+  color: white;
+}
+.primary-message h1 {
+  max-width: 50%;
+  display: inline-block;
+}
+.primary-message .email-form {
+  display: inline-block;
+  max-width: 49%;
+}
