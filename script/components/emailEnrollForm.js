@@ -1,18 +1,19 @@
 (function(NS){
     "use strict";
 
-    var parent = $('.js_emailEnrollForm');
+    var modules = $('.js_emailEnrollForm');
 
     NS.add('emailEnrollForm', {
         init : function(){
-            console.log('init hit');
-            setBindings();
+            if(modules.length > 1 ) {
+                setBindings();
+            }
         }
     });
 
 
     function submission(){
-        var emailAddr = parent.find('.js_emailField');
+        var emailAddr = modules.find('.js_emailField');
         if(NS.validations.email(emailAddr.val())){
             NS.xhr({
                url : "/dummy",
@@ -29,7 +30,7 @@
     }
 
     function successMessaging(data){
-        alert('yay');
+
     }
 
     function errorMessaging(){
@@ -41,12 +42,13 @@
     }
 
     function setBindings(){
-        parent.on('submit', function(evt){
-            console.log('submit');
-            evt.preventDefault();
-            evt.stopImmediatePropagation();
-            submission();
-            return false;
+        modules.each(function(index){
+            $(this).on('submit', function(evt){
+                evt.preventDefault();
+                evt.stopImmediatePropagation();
+                submission( this );
+                return false;
+            });
         });
     }
 
