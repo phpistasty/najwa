@@ -33,6 +33,8 @@ p {
   display: inline-block;
   padding: 0 5%;
   vertical-align: middle;
+  font-size: 12px;
+  letter-spacing: 1px;
 }
 @media screen and (max-width: 900px) {
   .head-message ul li {
@@ -78,6 +80,13 @@ p {
   .navWrapper .navbar .navbar-nav > li {
     float: inherit;
     display: inline-block;
+  }
+  .navWrapper .navbar .navbar-nav > li a {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
   }
 }
 .navbar-default .navbar-collapse,
@@ -173,13 +182,54 @@ p {
   z-index: 99;
   color: white;
 }
+.primary-message .color-head {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  margin-left: 34px;
+}
+.primary-message .color-head .first-color,
+.primary-message .color-head .second-color,
+.primary-message .color-head .third-color,
+.primary-message .color-head .forth-color {
+  height: 6px;
+  width: 80px;
+  position: relative;
+  top: -9px;
+  display: inline-block;
+  margin-left: -4px;
+}
+.primary-message .color-head .first-color {
+  background: #ff0000;
+}
+.primary-message .color-head .second-color {
+  background: #ffff00;
+}
+.primary-message .color-head .third-color {
+  background: #00ff00;
+}
+.primary-message .color-head .forth-color {
+  background: #0000ff;
+}
 .primary-message h1 {
-  max-width: 50%;
+  max-width: 49%;
   display: inline-block;
 }
 .primary-message .email-form {
   display: inline-block;
-  max-width: 49%;
+  max-width: 280px;
+}
+.primary-message .email-form strong {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.primary-message .email-form button i {
+  font-size: 20px;
 }
 .archive-section {
   color: white;

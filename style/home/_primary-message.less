@@ -11,27 +11,59 @@
 	color: white;
 
 	.color-head {
-		
-		.first-color {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 6px;
+		width: 100%;
+		margin-left: 34px;
+		.first-color,
+		.second-color,
+		.third-color,
+		.forth-color {
+			height: 6px;
+			width: 80px;
+			position: relative;
+			top: -9px;
+			display: inline-block;
+			margin-left: -4px;
 
+
+		}
+
+		.first-color {
+			background: #ff0000;
 		}
 		.second-color {
-
+			background: #ffff00;
 		}
 		.third-color {
-
+			background: #00ff00;
 		}
 		.forth-color {
-
+			background: #0000ff;
 		}
 	}
 
 	h1 {
-		max-width: 50%;
+		max-width: 49%;
 		display: inline-block;
 	}
 	.email-form {
 		display: inline-block;
-		max-width: 49%;
+		max-width: 280px;
+
+		strong {
+			font-size: 12px;
+			text-transform: uppercase;
+			font-family: @primaryFont;
+			font-weight: bold;
+			letter-spacing: 1px;
+		}
+		button {
+			i {
+				font-size: 20px;
+			}
+		}
 	}
 }
