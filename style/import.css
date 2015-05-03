@@ -301,13 +301,14 @@ label {
 .primary-message .color-head .forth-color {
   background: #0000ff;
 }
-.primary-message h1 {
+.primary-message .message {
   max-width: 49%;
   display: inline-block;
 }
 .primary-message .email-form {
   display: inline-block;
   max-width: 280px;
+  vertical-align: top;
 }
 .primary-message .email-form strong {
   font-size: 12px;
