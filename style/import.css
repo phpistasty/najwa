@@ -72,6 +72,34 @@ p {
 .archive-section .btn-link:hover {
   border-color: white;
 }
+.values-section {
+  text-align: center;
+}
+.values-section .value {
+  text-align: left;
+  display: inline-block;
+  width: 33%;
+  padding: 1em;
+  background: #2e2e30;
+  color: white;
+  margin-left: -4px;
+  border-top: solid 5px white;
+  margin-top: 2em;
+}
+.values-section .value.red {
+  border-color: #ff0000;
+}
+.values-section .value.yellow {
+  border-color: #ffff00;
+}
+.values-section .value.green {
+  border-color: #00ff00;
+}
+@media screen and (max-width: 768px) {
+  .values-section .value {
+    width: 100%;
+  }
+}
 .head-message {
   background: #2e2e30;
   color: white;
