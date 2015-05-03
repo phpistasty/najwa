@@ -50,13 +50,40 @@ p {
     display: inline-block;
   }
 }
-.twitter-section {
-  text-align: center;
+.footer {
+  background: #2e2e30;
+  color: white;
+  padding: 1em 0;
 }
-.twitter-section p {
+.footer .logo {
+  max-width: 200px;
+}
+.footer .site-links ul {
+  display: inline-block;
+  list-style: none;
+  width: 32%;
+}
+.footer .site-links ul a {
+  color: white;
+}
+.footer .site-links ul.primary-footer-links a {
+  font-weight: bold;
+}
+.twitter-section {
+  margin: 2em 0;
+  color: white;
+  background: url('../images/GreenBG.png');
+  background-size: 100%;
+  text-align: center;
+  padding: 2em 0;
+}
+.twitter-section .content {
+  padding: 5em 0;
+}
+.twitter-section .content p {
   font-size: 2em;
 }
-.twitter-section i {
+.twitter-section .content i {
   font-size: 2em;
 }
 .contact-section {
