@@ -217,6 +217,25 @@ label {
 .class-register input {
   display: block;
 }
+.donations-wrapper .container {
+  background: white;
+  padding: 1em;
+}
+.donations-wrapper .method {
+  text-align: center;
+}
+.donations-wrapper .method h4 {
+  padding: 20px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.donations-wrapper .method .method--icon {
+  height: 150px;
+  width: 150px;
+}
+.donations-wrapper .method .details {
+  vertical-align: middle;
+}
 .twitter-section {
   margin: 2em 0;
   color: white;
