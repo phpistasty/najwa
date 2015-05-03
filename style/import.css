@@ -16,6 +16,9 @@ p {
   padding: 0;
   margin: 0;
 }
+.invalid {
+  border: 1px solid #F00;
+}
 .head-message {
   background: #2e2e30;
   color: white;

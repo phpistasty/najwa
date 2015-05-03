@@ -21,28 +21,26 @@
 
     EmailEnrollmentForm.prototype.submission = function(){
         var emailAddr = this.$el.find('.js_emailField');
-        if(NS.validations.email(emailAddr.val())){
-            NS.xhr({
-                url : "/dummy",
-                data: {
-                    emailAddress : emailAddr.val()
-                },
-                success : successMessaging,
-                error : errorMessaging
-            });
-        }else{
-            // add validation fails
-            emailAddr.addClass('invalid');
+        if(!NS.validations.email(emailAddr.val())){
+            NS.validations.setFieldState(emailAddr, false);
+            return false;
         }
     };
 
     EmailEnrollmentForm.prototype.bindings = function(){
+        var self = this;
+
         this.$el.on('submit', function(evt){
-            evt.preventDefault();
-            evt.stopImmediatePropagation();
-            submission( this );
-            return false;
+            if(!self.submission()){
+                evt.preventDefault();
+                return false;
+            }
         });
+
+        this.$el.on('focus', '.invalid', function(evt){
+            NS.validations.setFieldState($(this), true);
+        });
+
     };
 
     EmailEnrollmentForm.prototype.showSuccessState = function(){

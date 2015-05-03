@@ -15,7 +15,6 @@
        }
    });
 
-
     function ContactUsForm(index, $el ){
         this.$el = $el;
         this.instanceId = index;
@@ -27,29 +26,13 @@
             formData = {
             type : this.$el.find('.js_type').val(),
             email: this.$el.find('.js_email').val(),
-            subject : this.$el.find('.js_subject').val(),
+            name : this.$el.find('.js_name').val(),
             body : this.$el.find('.js_body').val()
         };
 
-        // validate form data
-        // submit XHR;
-        if(this.validate(formData)){
-            ajax = this.submit(formData);
-        }else{
-            // form isn't valid , if any state needs to be on the whole form
-        }
-
+        return this.validate(formData);
     };
 
-    ContactUsForm.prototype.submit = function(formData){
-
-        return NS.xhr({
-            url : "/contactform",
-            data : formData,
-            success : this.showSuccessState
-        });
-
-    };
 
     ContactUsForm.prototype.validate = function(formData){
         var valid = true;
@@ -60,8 +43,8 @@
             valid = false;
         }
 
-        if(!NS.validations.isntEmpty(formData.subject)){
-            this.subjectState(false);
+        if(!NS.validations.isntEmpty(formData.name)){
+            this.nameState(false);
             valid = false;
         }
 
@@ -73,37 +56,31 @@
         return valid;
     };
 
-    ContactUsForm.prototype.showSuccessState = function(data){
-        // show the 'submit successful'
-
-    };
-
     ContactUsForm.prototype.emailState = function(valid){
-        if(valid){
-            // disable invalid?
-        }else{
-            // show error state
-        }
+        NS.validations.setFieldState(this.$el.find('.js_email'), valid);
     };
 
-    ContactUsForm.prototype.subjectState = function(valid){
-        if(valid){
-            // disable invalid?
-        }else{
-            // show error state
-        }
+    ContactUsForm.prototype.nameState = function(valid){
+        NS.validations.setFieldState(this.$el.find('.js_name'), valid);
+    };
 
+    ContactUsForm.prototype.bodyState = function(valid){
+        NS.validations.setFieldState(this.$el.find('.js_body'), valid);
     };
 
     ContactUsForm.prototype.bindings = function(){
         var self = this;
         this.$el.on('submit', function(evt){
-            evt.preventDefault();
-            self.submission();
-            return false;
+            if(!self.submission()){
+                evt.preventDefault();
+                return false;
+            }
         });
+
+        this.$el.on('focus change', '.invalid', function(evt){
+            NS.validations.setFieldState($(this), true);
+        });
+
     };
-
-
 
 })(najwa);
