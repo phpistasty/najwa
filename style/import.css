@@ -61,6 +61,17 @@ p {
   text-align: center;
   padding: 2em 0;
 }
+.archive-section .btn-link {
+  border: solid 1px #5f7fbc;
+  color: white;
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 10px;
+}
+.archive-section .btn-link:hover {
+  border-color: white;
+}
 .head-message {
   background: #2e2e30;
   color: white;
