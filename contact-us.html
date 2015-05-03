@@ -70,34 +70,34 @@
         </nav>
     </div>
     <div class="container class-register">
-        <h2>Register for {{select from page before}}</h2>
-        <h3>{{dates}} at {{location}}</h3>
-        <form class="col-md-7 js_registerForm container">
-
-            <!-- prepopped class info from class page //-->
-
-            <!-- display:block //-->
-            <label class="form-group">
-                Name *
-                <input type="text" class="js_name form-control" name="name">
-            </label>
-            <label class="form-group">
-                E-Mail*
-                <input type="text" class="js_email form-control" name="email">
-            </label>
-            <label class="form-group">
-                Phone Number*
-                <input type="text" class="js_phone form-control" name="phone">
-            </label>
-
+        <h2>Contact Us</h2>
+        <form class="form-horizontal js_contactUsForm" method="POST">
             <div class="form-group">
-                <input class="btn btn-default" type="submit" value="Register" name="registrationSubmit"/>
+                <label for="reason">I'd like to know more about:</label>
+                <div class="col-sm-10">
+                    <select name="reason" id="reason" class="js_type">
+                        <option value="0" selected>General</option>
+                        <option value="1">Book an Event</option>
+                        <option value="2">Register for a Class</option>
+                    </select>
+                </div>
             </div>
+            <div class="form-group">
+                <label for="contactName">Name</label>
+                <input id="contactName" name="contactName" type="text" class="col-md-4 col-sm-8 col-xs-12 js_name" placeholder="We'll never sell your email address or spam you."></input>
+            </div>
+            <div class="form-group">
+                <label for="replyAddress">Email Address</label>
+                <input id="replyAddress" name="replyAddress" type="email" class="col-md-4 col-sm-8 col-xs-12 js_email" placeholder="We'll never sell your email address or spam you."></input>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <div class="col-sm-10">
+                    <textarea name="message" id="message" class="form-control js_body" rows="5"></textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
         </form>
-        <div class="col-md-5 hidden-xs">
-            <img src="http://placehold.it/350x150" />
-            <img src="http://placehold.it/350x150" />
-        </div>
     </div>
 </div>
 <footer>
@@ -128,6 +128,7 @@
 <script src="script/components/emailEnrollForm.js"></script>
 <script src="script/components/contactForm.js"></script>
 <script src="script/components/stickyHeader.js"></script>
+<script src="script/components/contactForm.js"></script>
 <script src="script/components/registerForm.js"></script>
 
 <script>
