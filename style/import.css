@@ -11,6 +11,9 @@ p {
   font-family: 'PT Serif', serif;
   text-rendering: geometricPrecision;
 }
+body {
+  background: #f6f6f6;
+}
 .ghost-list {
   list-style-type: none;
   padding: 0;
@@ -281,6 +284,23 @@ p {
   width: 100%;
   padding: .5em;
   background: rgba(255, 255, 255, 0.6);
+}
+.content-area {
+  max-width: 600px;
+  padding-bottom: 1em;
+}
+.content-area h2,
+.content-area h3 {
+  border-bottom: solid;
+  margin-top: 1em;
+}
+.content-header {
+  margin: 2em 0;
+  color: white;
+  background: url('../images/GreenBG.png');
+  background-size: 100%;
+  text-align: center;
+  padding: 4em 0;
 }
 @media screen and (max-width: 768px) {
   .events-wrapper {
