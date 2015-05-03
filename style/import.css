@@ -28,10 +28,31 @@ p {
 }
 .head-message ul li {
   display: inline-block;
-  padding: 0 2%;
+  padding: 0 5%;
+  vertical-align: middle;
+}
+@media screen and (max-width: 900px) {
+  .head-message ul li {
+    padding: 0 2%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .head-message ul li.pillar {
+    display: none;
+  }
 }
 .head-message ul li a img {
-  max-width: 200px;
+  max-width: 93px;
+  margin-bottom: 6px;
+}
+.company-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+}
+.company-name span {
+  color: #999;
 }
 .navWrapper {
   position: relative;
