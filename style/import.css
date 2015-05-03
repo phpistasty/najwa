@@ -14,10 +14,28 @@ p {
 body {
   background: #f6f6f6;
 }
-.ghost-list {
+.ghost-list,
+.ghostList {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+.ghost-list a,
+.ghostList a,
+.ghost-list time,
+.ghostList time {
+  display: block;
+}
+.ghost-list .btn,
+.ghostList .btn {
+  display: inline-block;
+  margin: 10px 0;
+}
+.ghost-list li,
+.ghostList li {
+  border-bottom: solid 1px #eee;
+  background: white;
+  padding: 1em;
 }
 .invalid {
   border: 1px solid #F00;
