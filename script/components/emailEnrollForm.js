@@ -20,7 +20,7 @@
     }
 
     EmailEnrollmentForm.prototype.submission = function(){
-        var emailAddr = this.$el.find('.js_emailField');
+        var emailAddr = this.$el.find('.js_email');
         if(!NS.validations.email(emailAddr.val())){
             NS.validations.setFieldState(emailAddr, false);
             return false;
@@ -43,9 +43,6 @@
 
     };
 
-    EmailEnrollmentForm.prototype.showSuccessState = function(){
-
-    };
 
 
 })(najwa);
