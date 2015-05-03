@@ -19,12 +19,18 @@
     }
 
     BookingForm.prototype.bindings = function(){
+        var self = this;
+
         this.$el.on('focus change', '.invalid', function(){
             NS.validations.setFieldState($(this), true);
         });
-        this.$el.on('submit', function(evt){
 
+        this.$el.on('submit', function(evt){
+            if(!self.submission()){
+                evt.preventDefault();
+            }
         });
+
     };
 
     BookingForm.prototype.submission = function(evt){
@@ -41,6 +47,7 @@
         var valid = true;
 
         if(!NS.validations.isntEmpty(formData.name)){
+            this.setNameState(false);
             valid = false;
         }
 
@@ -54,7 +61,7 @@
             valid = false;
         }
 
-        if(!NS.validations.date.isntEmpty(formData.date)){
+        if(!NS.validations.isntEmpty(formData.date)){
             this.setDateState(false);
             valid = false;
         }
@@ -67,15 +74,15 @@
     };
 
     BookingForm.prototype.setEmailState = function(valid){
-        NS.validations.setState(this.$el.find('.js_email'), valid);
+        NS.validations.setFieldState(this.$el.find('.js_email'), valid);
     };
 
     BookingForm.prototype.setPhoneState = function(valid){
-        NS.validations.setState(this.$el.find('.js_telephone'), valid);
+        NS.validations.setFieldState(this.$el.find('.js_telephone'), valid);
     };
 
     BookingForm.prototype.setDateState = function(valid){
-        NS.validations.setState(this.$el.find('.js_date'), valid);
+        NS.validations.setFieldState(this.$el.find('.js_date'), valid);
     };
 
 
