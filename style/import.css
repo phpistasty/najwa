@@ -5,6 +5,7 @@ h4,
 h5,
 h6 {
   font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
 }
 p {
   font-family: 'PT Serif', serif;
@@ -181,4 +182,55 @@ p {
   .values-section .value {
     width: 100%;
   }
+}
+@media screen and (max-width: 768px) {
+  .events-wrapper {
+    text-align: center;
+  }
+}
+.events-wrapper ol {
+  list-style: none;
+  background: white;
+  padding: 1em;
+}
+.events-wrapper ol li {
+  min-height: 150px;
+  padding: 10px;
+  margin-bottom: 2px;
+  border-bottom: solid 1px #eee;
+}
+@media screen and (max-width: 768px) {
+  .events-wrapper ol li {
+    margin-bottom: 1.5em;
+    padding-bottom: 1em;
+    border-bottom: solid 1px #eee;
+  }
+}
+.events-wrapper ol li img {
+  float: left;
+  margin-right: 10px;
+  border-radius: 6px;
+}
+@media screen and (max-width: 768px) {
+  .events-wrapper ol li img {
+    float: inherit;
+    max-width: 100px;
+  }
+}
+.events-wrapper ol li p {
+  max-width: 700px;
+}
+.events-wrapper ol li a {
+  border: solid 1px white;
+  color: white;
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 10px;
+}
+.events-wrapper ol li a:hover {
+  border-color: white;
+}
+.events-wrapper ol li h3 {
+  margin: 0;
 }
