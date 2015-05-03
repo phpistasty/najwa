@@ -69,6 +69,12 @@ p {
 .footer .site-links ul.primary-footer-links a {
   font-weight: bold;
 }
+.class-table th {
+  padding: 0 15px;
+}
+.class-table td {
+  padding: 15px;
+}
 .twitter-section {
   margin: 2em 0;
   color: white;
