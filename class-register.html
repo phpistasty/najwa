@@ -43,7 +43,8 @@
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mobile-navbar">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#mobile-navbar">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -67,30 +68,36 @@
         <!-- /.container-fluid -->
     </nav>
 </div>
+<div class="container class-register">
+    <h2>Register for {{select from page before}}</h2>
+    <h3>{{dates}} at {{location}}</h3>
+    <form class="col-md-7 js_registerForm container">
 
-<form class="class-register js_registerForm">
-    <!-- prepopped class info from class page //-->
-    <div>
-        Class: {{selected on page before}} <br/>
-        Dates : {{selected on page before}} <br/>
-        Location : {{selected on page before}} <br/>
+        <!-- prepopped class info from class page //-->
 
-    <!-- display:block //-->
-    <label>
-        Name *
-        <input type="text" class="js_name" name="name">
-    </label>
-    <label>
-        E-Mail*
-        <input type="text" class="js_email" name="email">
-    </label></div>
-    <label>
-        Phone Number*
-        <input type="text" class="js_phone" name="phone">
-    </label>
-    <input type="submit" value="Register" name="registrationSubmit"/>
-</form>
+        <!-- display:block //-->
+        <label class="form-group">
+            Name *
+            <input type="text" class="js_name form-control" name="name">
+        </label>
+        <label class="form-group">
+            E-Mail*
+            <input type="text" class="js_email form-control" name="email">
+        </label>
+        <label class="form-group">
+            Phone Number*
+            <input type="text" class="js_phone form-control" name="phone">
+        </label>
 
+        <div class="form-group">
+            <input class="btn btn-default" type="submit" value="Register" name="registrationSubmit"/>
+        </div>
+    </form>
+    <div class="col-md-5 hidden-xs">
+        <img src="http://placehold.it/350x150" />
+        <img src="http://placehold.it/350x150" />
+    </div>
+</div>
 <footer>
     <p>© Company 2014</p>
 </footer>

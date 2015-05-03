@@ -114,6 +114,12 @@ p {
 .class-table td {
   padding: 15px;
 }
+.class-register label {
+  display: block;
+}
+.class-register input {
+  display: block;
+}
 .twitter-section {
   margin: 2em 0;
   color: white;
