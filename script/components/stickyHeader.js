@@ -7,8 +7,6 @@
     NS.add('stickyHeader', {
         init : function() {
             modules.each(function(index){
-                console.info(index);
-                console.log(NS);
                 var stickyHeader = new StickyHeader(instances.length, $(this));
                 instances.push(stickyHeader);
             });
@@ -24,8 +22,6 @@
             .setOnClass('sticky')
             .setElement(this.$el);
     }
-
-
 
 
 })(najwa);

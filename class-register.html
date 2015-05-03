@@ -68,7 +68,7 @@
     </nav>
 </div>
 
-<form class="class-register">
+<form class="class-register js_registerForm">
     <!-- prepopped class info from class page //-->
     <div>
         Class: {{selected on page before}} <br/>
@@ -78,16 +78,17 @@
     <!-- display:block //-->
     <label>
         Name *
-        <input type="text" name="name">
+        <input type="text" class="js_name" name="name">
     </label>
     <label>
         E-Mail*
-        <input type="text" name="email">
+        <input type="text" class="js_email" name="email">
     </label></div>
     <label>
         Phone Number*
-        <input type="text" name="phone">
+        <input type="text" class="js_phone" name="phone">
     </label>
+    <input type="submit" value="Register" name="registrationSubmit"/>
 </form>
 
 <footer>
@@ -118,6 +119,7 @@
 <script src="script/components/emailEnrollForm.js"></script>
 <script src="script/components/contactForm.js"></script>
 <script src="script/components/stickyHeader.js"></script>
+<script src="script/components/registerForm.js"></script>
 
 <script>
     (function (i, s, o, g, r, a, m) {
