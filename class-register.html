@@ -68,96 +68,27 @@
     </nav>
 </div>
 
-<article class="donations-wrapper donations">
-
-    <h2>Nawjwa Dance Studio</h2>
-    <p>
-        NDC’s classes bring the arts to hundreds students each year. The goal of these classes is to foster a passion
-        for dance and to provide increased opportunities for technical training and studio instruction.
-    </p>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Class</th>
-                <th>Dates</th>
-                <th>Times</th>
-                <th>Days</th>
-                <th>Type</th>
-                <th>Teacher</th>
-                <th>Location</th>
-                <th>Register</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <a data-toggle="modal" data-target="#class_1">Tap</a>
-                </td>
-                <td>
-                    <time>
-                        May 2- June 10, 2015
-                    </time>
-                </td>
-                <td>
-                    <time>8:00pm-9:00pm</time>
-                </td>
-                <td>Saturday</td>
-                <td>Youth</td>
-                <td>J. Smith</td>
-                <td>Golden Temple</td>
-                <td>
-                    <a class="btn btn-default">Register</a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-   
-    <ul class="ghostList">
-        <li>
-            <a data-toggle="modal" data-target="#class_1">Tap</a>
-            <time>May 2- June 10, 2015</time>
-            <time>8:00pm-9:00pm</time>
-            <div>
-                Saturday
-            </div>
-            <div>Youth</div>
-            <div>J. Smith</div>
-            <div>Golden Temple</div>
-            <a class="btn btn-default">Register</a>
-        </li>  
-    </ul>
-
+<form class="class-register">
+    <!-- prepopped class info from class page //-->
     <div>
+        Class: {{selected on page before}} <br/>
+        Dates : {{selected on page before}} <br/>
+        Location : {{selected on page before}} <br/>
 
-    </div>
-    <!-- Modal -->
-    <!-- iterate the id by the index of the class //-->
-    <div class="modal fade" id="class_1" tabindex="-1" role="dialog" aria-labelledby="class name!!!" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Hip-Hop Dance Class:</h4>
-                </div>
-                <div class="modal-body">
-                    Registration fee:: $20.00 through October 04, 2014<br/>
-                    Class fee: Students under 18 years -- $70.00 per six week session<br/>
-                    Advanced payment: Adults $12.00 per class; $15.00 per class without registration<br/>
-                    Professional Rate: $12.0<br/>
-                    <br />
-                    Class description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
-                    Dress code: Leodard, sneakers, ballet slippers etc.
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</article>
+    <!-- display:block //-->
+    <label>
+        Name *
+        <input type="text" name="name">
+    </label>
+    <label>
+        E-Mail*
+        <input type="text" name="email">
+    </label></div>
+    <label>
+        Phone Number*
+        <input type="text" name="phone">
+    </label>
+</form>
 
 <footer>
     <p>© Company 2014</p>
