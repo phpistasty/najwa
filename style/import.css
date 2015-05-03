@@ -4,9 +4,17 @@
 .site-section-cta img {
   max-width: 100%;
 }
-.home-carousel .carousel-inner img {
-  margin: 0 auto;
-  max-width: 1300px;
+.home-carousel .carousel-inner .item {
+  max-height: 500px;
+  overflow: hidden;
+}
+.home-carousel .carousel-inner .item img {
+  width: 100%;
+  margin-top: -10%;
+}
+.home-carousel .carousel-control.left,
+.home-carousel .carousel-control.right {
+  background: inherit;
 }
 .primary-message {
   max-width: 900px;
