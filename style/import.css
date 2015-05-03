@@ -10,6 +10,55 @@ p {
   font-family: 'PT Serif', serif;
   text-rendering: geometricPrecision;
 }
+.head-message {
+  background: #2e2e30;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+.head-message ul {
+  padding: 0;
+  list-style: none;
+}
+.head-message ul li {
+  display: inline-block;
+  padding: 0 2%;
+}
+.head-message ul li a img {
+  max-width: 200px;
+}
+.navWrapper {
+  position: relative;
+  height: 50px;
+}
+.navWrapper .navbar {
+  margin-bottom: 0;
+}
+.navWrapper .navbar.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+@media screen and (min-width: 768px) {
+  .navWrapper .navbar .navbar-nav {
+    text-align: center;
+    float: inherit;
+  }
+  .navWrapper .navbar .navbar-nav > li {
+    float: inherit;
+    display: inline-block;
+  }
+}
+.twitter-section {
+  text-align: center;
+}
+.twitter-section p {
+  font-size: 2em;
+}
+.twitter-section i {
+  font-size: 2em;
+}
 .contact-section {
   padding: 1em 0;
 }
@@ -98,45 +147,5 @@ p {
 @media screen and (max-width: 768px) {
   .values-section .value {
     width: 100%;
-  }
-}
-.head-message {
-  background: #2e2e30;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-}
-.head-message ul {
-  padding: 0;
-  list-style: none;
-}
-.head-message ul li {
-  display: inline-block;
-  padding: 0 2%;
-}
-.head-message ul li a img {
-  max-width: 200px;
-}
-.navWrapper {
-  position: relative;
-  height: 50px;
-}
-.navWrapper .navbar {
-  margin-bottom: 0;
-}
-.navWrapper .navbar.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-}
-@media screen and (min-width: 768px) {
-  .navWrapper .navbar .navbar-nav {
-    text-align: center;
-    float: inherit;
-  }
-  .navWrapper .navbar .navbar-nav > li {
-    float: inherit;
-    display: inline-block;
   }
 }
