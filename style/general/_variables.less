@@ -1,7 +1,7 @@
 // Color Scale
 // --------------------------------------------------
 @primary-dark: #2e2e30;
-@blue: 200;
+@blue: #3b62ac;
 @green: 300;
 @purple: 400;
  
@@ -9,6 +9,20 @@
 // Color Applications
 // --------------------------------------------------
 @darkBackground: @primary-dark;
+@blueBackground: @blue;
 
 @followUpVisibility: @purple;
 @prlWelcome: @purple;
+
+// font-size: 
+
+@primaryFont: 'Montserrat', sans-serif;
+@secondaryFont: 'PT Serif', serif;
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: @primaryFont;
+}
+p {
+	font-family: @secondaryFont;
+	text-rendering: geometricPrecision;
+}

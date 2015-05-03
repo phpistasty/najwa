@@ -1,3 +1,15 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+p {
+  font-family: 'PT Serif', serif;
+  text-rendering: geometricPrecision;
+}
 .contact-section {
   padding: 1em 0;
 }
@@ -15,6 +27,12 @@
 .home-carousel .carousel-control.left,
 .home-carousel .carousel-control.right {
   background: inherit;
+}
+.home-carousel .carousel-caption {
+  bottom: inherit;
+  top: 20px;
+  text-align: left;
+  max-width: 420px;
 }
 .primary-message {
   max-width: 900px;
@@ -35,6 +53,13 @@
 .primary-message .email-form {
   display: inline-block;
   max-width: 49%;
+}
+.archive-section {
+  color: white;
+  background: url('../images/BlueBG.png');
+  background-size: 100%;
+  text-align: center;
+  padding: 2em 0;
 }
 .head-message {
   background: #2e2e30;
